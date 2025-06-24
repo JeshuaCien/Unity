@@ -14,6 +14,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private UnityEvent _onBattleEnded;
     private Coroutine _battleCoroutine;
+
+    private DamageTarget damageTarget = new DamageTarget();
     public void AddFighter(Fighter fighter)
     {
         _fighters.Add(fighter);
@@ -59,8 +61,13 @@ public class BattleManager : MonoBehaviour
             float damage = Random.Range(attack.minDamage, attack.maxDamage);
             attacker.CharacterAnimator.Play(attack.animationName);
             SoundManager.instance.Play(attack.soundName);
+            GameObject attackParticles = Instantiate(attack.particlesPrefab, attacker.transform.position, Quaternion.identity);
+            attackParticles.transform.SetParent(attacker.transform);
             yield return new WaitForSeconds(attack.attackDuration);
-            defender.Health.TakeDamage(damage);
+            GameObject hitParticles = Instantiate(attack.hitParticlesPrefab, defender.transform.position, Quaternion.identity);
+            hitParticles.transform.SetParent(defender.transform);
+            damageTarget.SetDamageTarget(defender.transform, damage);
+            defender.Health.TakeDamage(damageTarget);
             if (defender.Health.CurrentHealth <= 0)
             {
                 RemoveFighter(defender);

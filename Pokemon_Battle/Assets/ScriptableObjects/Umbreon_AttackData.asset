@@ -15,13 +15,21 @@ MonoBehaviour:
   attacks:
   - attackName: Finta
     minDamage: 30
-    maxDamage: 60
+    maxDamage: 35
     attackDuration: 2
     animationName: Attack_Umbreon
     soundName: Umbreon_1
+    particlesPrefab: {fileID: 9027514048236820045, guid: effb650189dc5714e9e9801b1cfb3991,
+      type: 3}
+    hitParticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+      type: 3}
   - attackName: Chilenita
     minDamage: 15
     maxDamage: 40
-    attackDuration: 1
+    attackDuration: 2
     animationName: Attack_Umbreon
     soundName: Umbreon_2
+    particlesPrefab: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881,
+      type: 3}
+    hitParticlesPrefab: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b,
+      type: 3}
