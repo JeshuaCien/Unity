@@ -562,17 +562,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d63786cdfd260fe4297ac1814ee44607,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d63786cdfd260fe4297ac1814ee44607,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d63786cdfd260fe4297ac1814ee44607,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d63786cdfd260fe4297ac1814ee44607,
         type: 3}
@@ -813,6 +813,8 @@ MonoBehaviour:
           m_StringArgument: Floragato_Idle
           m_BoolArgument: 0
         m_CallState: 2
+  _winAnimationName: Floragato_Attack
+  _winSoundName: Floragato
 --- !u!1 &418397607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,17 +1029,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c9cbcb8fe3580b144905c7fa6b74f296,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9cbcb8fe3580b144905c7fa6b74f296,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9cbcb8fe3580b144905c7fa6b74f296,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9cbcb8fe3580b144905c7fa6b74f296,
         type: 3}
@@ -1198,6 +1200,8 @@ MonoBehaviour:
           m_StringArgument: Idle_Umbreon
           m_BoolArgument: 0
         m_CallState: 2
+  _winAnimationName: Attack_Umbreon
+  _winSoundName: Umbreon's cry
 --- !u!114 &562299852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,6 +1964,7 @@ GameObject:
   - component: {fileID: 869861660}
   - component: {fileID: 869861659}
   - component: {fileID: 869861661}
+  - component: {fileID: 869861662}
   m_Layer: 5
   m_Name: MessageFrame
   m_TagString: Untagged
@@ -1982,11 +1987,11 @@ RectTransform:
   - {fileID: 1759609271}
   m_Father: {fileID: 936331985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -360}
-  m_SizeDelta: {x: 974.9, y: 296.7}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 67.41}
+  m_SizeDelta: {x: 935.61, y: 220}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &869861659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,12 +2042,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebfc2aec9fcc2a43be6a47a4cfe950f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 0}
+  _text: {fileID: 1759609272}
   _timeBetweenLetters: 0.05
   _timeToDisappear: 1
-  _animator: {fileID: 0}
+  _animator: {fileID: 869861662}
   _ShowTextAnimationname: ShowText
   _hideTextAnimationName: HideText
+--- !u!95 &869861662
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869861657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43fcae8dbf756e742a8a474e7be781d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &907419650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,10 +3030,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 869861658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 914.8, y: 255.8}
+  m_SizeDelta: {x: -50, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759609272
 MonoBehaviour:
@@ -3030,18 +3057,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 90
+    m_BestFit: 1
+    m_MinSize: 6
+    m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Umbreon appear
+  m_Text: 'Umbreon appear '
 --- !u!222 &1759609273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3125,7 +3152,31 @@ MonoBehaviour:
         m_CallState: 2
   _onBattleEnded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1916229682}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1916229682}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Victory
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1790287176
 Transform:
   m_ObjectHideFlags: 0

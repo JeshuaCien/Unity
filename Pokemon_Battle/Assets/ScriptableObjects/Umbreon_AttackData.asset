@@ -15,7 +15,7 @@ MonoBehaviour:
   attacks:
   - attackName: Finta
     minDamage: 30
-    maxDamage: 35
+    maxDamage: 45
     attackDuration: 2
     animationName: Attack_Umbreon
     soundName: Umbreon_1
@@ -25,7 +25,7 @@ MonoBehaviour:
       type: 3}
   - attackName: Chilenita
     minDamage: 15
-    maxDamage: 40
+    maxDamage: 50
     attackDuration: 2
     animationName: Attack_Umbreon
     soundName: Umbreon_2

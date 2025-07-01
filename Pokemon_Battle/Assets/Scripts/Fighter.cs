@@ -19,6 +19,15 @@ public class Fighter : MonoBehaviour
     [SerializeField]
     private UnityEvent _OnInitialize;
 
+    [SerializeField]
+
+    private string _winAnimationName;
+    public string WinAnimationName => _winAnimationName;
+
+    [SerializeField]
+    private string _winSoundName;
+    public string WinSoundName => _winSoundName;
+
     public void InitializeFighter()
     {
         _OnInitialize?.Invoke();
