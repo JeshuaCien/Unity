@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe21011b4bf53f44b8fa06116d16ff43, type: 3}
-  m_Name: Umbreon_AttackData
+  m_Name: Rayquaza_AttackData
   m_EditorClassIdentifier: 
   attacks:
-  - attackName: Finta
+  - attackName: Mordisco
     minDamage: 20
     maxDamage: 30
     attackDuration: 2
-    animationName: Attack_Umbreon
-    soundName: Umbreon_1
-    particlesPrefab: {fileID: 9027514048236820045, guid: effb650189dc5714e9e9801b1cfb3991,
+    animationName: Attack1_Rayquaza
+    soundName: rayquaza-cry
+    particlesPrefab: {fileID: 1206498299807332555, guid: af6c1e3f046eecd4d81330aeb285600f,
       type: 3}
-    hitParticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+    hitParticlesPrefab: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0,
       type: 3}
   - attackName: Chilenita
     minDamage: 50
     maxDamage: 60
     attackDuration: 2
-    animationName: Attack_Umbreon
-    soundName: Umbreon_2
-    particlesPrefab: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881,
+    animationName: Attack2_Rayquaza
+    soundName: rayquaza-cry
+    particlesPrefab: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
       type: 3}
-    hitParticlesPrefab: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b,
+    hitParticlesPrefab: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50,
       type: 3}
